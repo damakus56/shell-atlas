@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore — Shell Atlas</title>
+  <meta name="description" content="An interactive Q&A explorer with clear, sourced answers about Shell and the energy industry. Unofficial educational project." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23DD1D21'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23FBCE07' font-family='Arial' font-weight='bold'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <section class="explore-hero">
+    <div class="wrap">
+      <div class="eyebrow reveal">Ask the Atlas</div>
+      <h1 class="reveal" data-delay="1">Explore the energy world</h1>
+      <p class="muted reveal" data-delay="2" style="max-width:50ch;margin:16px auto 0">
+        Clear, sourced answers to common questions about Shell, oil &amp; gas, and the energy transition.
+      </p>
+      <div class="search-box reveal" data-delay="2">
+        <span class="ico">🔍</span>
+        <input id="q-search" type="text" aria-label="Search questions" placeholder="Search questions, or type one and press Enter…" autocomplete="off" />
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="explore-layout">
+      <div class="q-list" id="q-list"><!-- question buttons --></div>
+      <div class="answer-panel" id="answer-panel"><!-- selected answer --></div>
+    </div>
+  </div>
+
+  <div style="height:60px"></div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/explore.js"></script>
+</body>
+</html>

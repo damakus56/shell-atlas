@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shell Atlas — A global energy company, visualized</title>
+  <meta name="description" content="An unofficial, educational interactive visualization of Shell's global energy operations, products, finances and history." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Inline SVG favicon (Shell-colour wordmark mark — not the official logo) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23DD1D21'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23FBCE07' font-family='Arial' font-weight='bold'%3ES%3C/text%3E%3C/svg%3E" />
+
+  <!-- Styles (relative path for GitHub Pages) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== LANDING: full-screen globe ===================== -->
+  <section class="hero">
+    <div id="globe"></div>
+
+    <div class="hero-overlay">
+      <div class="eyebrow">Unofficial Energy Atlas</div>
+      <h1>The world of <span class="grad">Shell</span>, on one globe.</h1>
+      <p class="sub">Explore a global energy company's real assets, segments, finances and history — plotted, charted and explained.</p>
+      <div class="disclaimer-pill">⚠️ Unofficial &amp; educational — not affiliated with Shell plc</div>
+    </div>
+
+    <!-- legend doubles as a category filter; populated by globe.js -->
+    <div class="globe-legend"></div>
+
+    <div class="scroll-cue">Scroll to explore<span class="chev"></span></div>
+  </section>
+
+  <!-- ===================== PRODUCTS & SEGMENTS ===================== -->
+  <section class="section" id="segments">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What Shell does</div>
+        <h2>Six businesses, one energy system.</h2>
+        <p>Shell reports across five operating segments plus Corporate — from finding oil and gas to selling fuels and building low-carbon energy.</p>
+      </div>
+      <div class="segments-grid" id="segments-grid"><!-- populated by landing.js --></div>
+    </div>
+  </section>
+
+  <!-- ===================== FINANCIALS ===================== -->
+  <section class="section" id="financials" style="background:linear-gradient(180deg,transparent,rgba(221,29,33,0.04),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">The numbers</div>
+        <h2>A decade of real financials.</h2>
+        <p>Revenue, profit, capital spending and oil &amp; gas production, 2015–2024 — from Shell's annual reports and reputable financial sources. Toggle a metric to explore.</p>
+      </div>
+
+      <div class="fin-controls reveal" id="fin-controls"><!-- metric buttons --></div>
+
+      <div class="fin-layout">
+        <div class="chart-card reveal">
+          <div class="chart-title">
+            <h3 id="chart-title">Revenue</h3>
+            <span class="unit" id="chart-unit">$B · 2015–2024</span>
+          </div>
+          <p class="chart-desc" id="chart-desc"><!-- plain-language definition of the metric --></p>
+          <div id="chart-svg" class="chart-svg-holder"><!-- SVG chart --></div>
+          <div class="chart-note">
+            Hover a bar for the exact figure and its source. 2020 was a loss year (COVID demand collapse);
+            2022 was a record-profit year. Some 2015 figures and certain capex values are
+            <span class="flag approximate">approx.</span> — see the JSON for per-point sources.
+          </div>
+        </div>
+        <div class="fin-stats" id="fin-stats"><!-- stat cards --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPLORE TEASER ===================== -->
+  <section class="section" id="explore-teaser">
+    <div class="wrap" style="text-align:center">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--shell-yellow);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:14px">Go deeper</div>
+        <h2>Questions about energy? Ask the Atlas.</h2>
+        <p class="muted" style="max-width:48ch;margin:16px auto 28px">From "what is upstream vs downstream?" to "how does an LNG supply chain work?" — clear, sourced answers.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary" href="explore.html" data-link>Open the Explorer →</a>
+          <a class="btn btn-ghost" href="history.html" data-link>See Shell's history</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Globe.gl (wraps three.js) from CDN -->
+  <script src="https://unpkg.com/globe.gl@2.33.0/dist/globe.gl.min.js"></script>
+
+  <!-- App scripts -->
+  <script src="js/shared.js"></script>
+  <script src="js/globe.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>

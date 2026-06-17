@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "description": "Shell plc reporting business segments as defined in the Shell Annual Report / Form 20-F FY2024.",
+    "source": "https://www.sec.gov/Archives/edgar/data/0001306965/000130696525000007/shel-20241231.htm",
+    "confidence": "verified"
+  },
+  "segments": [
+    {
+      "id": "integrated-gas",
+      "name": "Integrated Gas",
+      "tagline": "Natural gas, LNG and gas-to-liquids",
+      "description": "Liquefied natural gas (LNG), the conversion of natural gas into gas-to-liquids fuels and products, and the marketing and trading of LNG and natural gas. Shell is the world's largest LNG trader.",
+      "accent": "#FBCE07",
+      "type": "gas",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "upstream",
+      "name": "Upstream",
+      "tagline": "Finding and producing oil & gas",
+      "description": "Exploration for and extraction of crude oil, natural gas and natural gas liquids, plus the transport of these to market.",
+      "accent": "#DD1D21",
+      "type": "oil",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "tagline": "Fuels, lubricants and retail",
+      "description": "Sale of fuels, lubricants and convenience retail to retail and business customers — the Mobility, Lubricants, and Sectors & Decarbonisation businesses.",
+      "accent": "#FFB81C",
+      "type": "retail",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "chemicals-products",
+      "name": "Chemicals & Products",
+      "tagline": "Refining and petrochemicals",
+      "description": "Refineries and chemical plants that turn crude oil and feedstocks into fuels and petrochemicals, plus associated pipeline, trading, optimisation and oil-sands activities.",
+      "accent": "#FF6B35",
+      "type": "refining",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "renewables",
+      "name": "Renewables & Energy Solutions",
+      "tagline": "Power, hydrogen, CCS and more",
+      "description": "Renewable power generation; trading and optimisation of power and pipeline gas; carbon credits; hydrogen; carbon capture and storage; nature-based projects; and Shell Ventures.",
+      "accent": "#4ADE80",
+      "type": "renewables",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate",
+      "tagline": "Holdings, treasury and central functions",
+      "description": "Non-operating support: holdings and treasury, headquarters and central functions, self-insurance, and centrally managed innovation.",
+      "accent": "#9CA3AF",
+      "type": "corporate",
+      "confidence": "verified",
+      "source": "Shell Form 20-F FY2024"
+    }
+  ]
+}

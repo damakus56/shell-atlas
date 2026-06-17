@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "description": "Shell plc year-by-year financials. Revenue and net income are IFRS figures (net income = income attributable to Shell plc shareholders). Capex = cash capital expenditure. Production = total available for sale, thousand barrels of oil equivalent per day (kboe/d).",
+    "currency": "USD billions (revenue, netIncome, capex); kboe/d (production)",
+    "note": "The company was 'Royal Dutch Shell plc' through 2021 and 'Shell plc' from January 2022. 2020 was a loss year driven by the COVID demand collapse and large impairments. 2022 was a record-profit year.",
+    "primarySources": [
+      "https://www.shell.com/investors/results-and-reporting/annual-report.html",
+      "https://stockanalysis.com/stocks/SHEL/financials/",
+      "https://en.wikipedia.org/wiki/Shell_plc"
+    ]
+  },
+  "series": [
+    { "year": 2015, "revenue": 265.0, "netIncome": 1.9,  "capex": 26.0, "production": 2954, "confidence": "approximate", "source": "Royal Dutch Shell Annual Report 2015 / stockanalysis.com (single-source, approximate)" },
+    { "year": 2016, "revenue": 233.6, "netIncome": 4.8,  "capex": 22.1, "production": 3668, "confidence": "verified",    "source": "Royal Dutch Shell FY2017 results (incl. 2016 comparatives); Wikipedia" },
+    { "year": 2017, "revenue": 305.2, "netIncome": 13.4, "capex": 20.8, "production": 3664, "confidence": "verified",    "source": "Royal Dutch Shell FY2017 unaudited results; Wikipedia" },
+    { "year": 2018, "revenue": 388.4, "netIncome": 23.4, "capex": 23.0, "production": 3839, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2018; Wikipedia (capex approximate)" },
+    { "year": 2019, "revenue": 344.0, "netIncome": 15.8, "capex": 24.0, "production": 3752, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2019; Wikipedia (capex approximate)" },
+    { "year": 2020, "revenue": 180.0, "netIncome": -21.7,"capex": 18.0, "production": 3386, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2020 (loss year); Wikipedia (capex approximate)" },
+    { "year": 2021, "revenue": 261.0, "netIncome": 20.1, "capex": 19.0, "production": 3237, "confidence": "verified",    "source": "Shell Annual Report 2021; stockanalysis.com" },
+    { "year": 2022, "revenue": 381.0, "netIncome": 42.3, "capex": 22.6, "production": 2864, "confidence": "verified",    "source": "Shell Annual Report 2022 (record profit); stockanalysis.com" },
+    { "year": 2023, "revenue": 316.0, "netIncome": 19.4, "capex": 23.0, "production": 2791, "confidence": "verified",    "source": "Shell Annual Report 2023; stockanalysis.com" },
+    { "year": 2024, "revenue": 284.0, "netIncome": 16.5, "capex": 19.6, "production": 2836, "confidence": "verified",    "source": "Shell Q4 2024 & full-year results / Form 20-F FY2024; stockanalysis.com" }
+  ],
+  "metrics": [
+    { "key": "revenue",    "label": "Revenue",            "unit": "$B",     "color": "#FBCE07", "format": "currency", "desc": "Total money taken in from selling energy and products — the top line, before any costs." },
+    { "key": "netIncome",  "label": "Net income",         "unit": "$B",     "color": "#DD1D21", "format": "currency", "desc": "Profit (or loss) left for shareholders after all costs and taxes — the bottom line." },
+    { "key": "capex",      "label": "Capital expenditure","unit": "$B",     "color": "#7FB2FF", "format": "currency", "desc": "Cash invested in building and maintaining assets like platforms, plants and projects." },
+    { "key": "production", "label": "Oil & gas production","unit": "kboe/d", "color": "#4ADE80", "format": "number",   "desc": "How much oil and gas was produced per day, in thousands of barrels of oil equivalent." }
+  ],
+  "callouts": [
+    { "year": 2020, "label": "COVID demand collapse — net loss of $21.7B", "metric": "netIncome" },
+    { "year": 2022, "label": "Record profit — $42.3B net income", "metric": "netIncome" }
+  ]
+}

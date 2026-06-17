@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "description": "Major Shell plc global assets for the interactive globe. These are REAL Shell operations. Coordinates are approximate and suitable for globe-scale plotting; offshore/floating facilities have no fixed land coordinate and are marked accordingly. Recently sold/exited assets are excluded from the live map to avoid misrepresenting current ownership.",
+    "confidenceLegend": {
+      "verified": "Real Shell asset, location accurate to city/site.",
+      "approximate": "Real Shell asset, but coordinates are a representative point (e.g. offshore basin) — not a precise location.",
+      "illustrative": "Invented for completeness — not a confirmed fact."
+    },
+    "excludedSoldAssets": [
+      "Sakhalin-2 LNG, Russia (Shell exited 2022)",
+      "Pulau Bukom refinery & Jurong Island petrochemicals, Singapore (sold 2024)",
+      "Malampaya gas field, Philippines (exited 2022)",
+      "Permian Basin shale, USA (sold to ConocoPhillips 2021)",
+      "Deer Park refinery, USA (refinery stake sold to Pemex 2021/22)"
+    ]
+  },
+  "categories": [
+    { "type": "gas",        "label": "Integrated Gas / LNG", "color": "#FBCE07" },
+    { "type": "oil",        "label": "Oil / Upstream",        "color": "#DD1D21" },
+    { "type": "refining",   "label": "Refining",              "color": "#FF6B35" },
+    { "type": "chemicals",  "label": "Chemicals",             "color": "#A78BFA" },
+    { "type": "renewables", "label": "Renewables / Low-carbon","color": "#4ADE80" },
+    { "type": "hub",        "label": "HQ / Trading hub",      "color": "#7FB2FF" }
+  ],
+  "assets": [
+    { "id": "prelude",   "name": "Prelude FLNG",            "country": "Australia",   "region": "Browse Basin (offshore NW)", "type": "gas", "lat": -13.8, "lng": 123.3, "stake": "Operator (67.5%)", "description": "World's first floating LNG facility, ~3.6 mtpa.", "confidence": "approximate", "source": "Shell Australia / Wikipedia (offshore approx.)" },
+    { "id": "qclng",     "name": "Queensland Curtis LNG (QGC)","country": "Australia","region": "Curtis Island, Gladstone", "type": "gas", "lat": -23.76, "lng": 151.18, "stake": "Operator / majority", "description": "Coal-seam-gas-to-LNG export plant.", "confidence": "approximate", "source": "Shell / LNG Prime" },
+    { "id": "gorgon",    "name": "Gorgon LNG (equity)",      "country": "Australia",   "region": "Barrow Island, WA", "type": "gas", "lat": -20.80, "lng": 115.46, "stake": "25% (Chevron-operated)", "description": "Major WA LNG; Shell holds equity, does not operate.", "confidence": "approximate", "source": "Wikipedia / Chevron" },
+    { "id": "lngcanada", "name": "LNG Canada",               "country": "Canada",      "region": "Kitimat, BC", "type": "gas", "lat": 54.0, "lng": -128.69, "stake": "40% operator", "description": "First major Canadian LNG export terminal; started up 2025.", "confidence": "approximate", "source": "Shell / CBC" },
+    { "id": "nlng",      "name": "Nigeria LNG (NLNG)",       "country": "Nigeria",     "region": "Bonny Island", "type": "gas", "lat": 4.42, "lng": 7.16, "stake": "25.6%", "description": "Six trains, ~22 mtpa; Train 7 expansion underway.", "confidence": "approximate", "source": "Businessday / NLNG" },
+    { "id": "brunei",    "name": "Brunei LNG",               "country": "Brunei",      "region": "Lumut", "type": "gas", "lat": 4.68, "lng": 114.40, "stake": "~25% (JV)", "description": "One of the world's oldest LNG plants.", "confidence": "approximate", "source": "Shell (exact equity % not freshly confirmed)" },
+    { "id": "qatarnfe",  "name": "Qatar North Field East LNG","country": "Qatar",      "region": "Ras Laffan", "type": "gas", "lat": 25.90, "lng": 51.55, "stake": "6.25% equity", "description": "Equity in Qatar's mega LNG expansion (to 126 mtpa).", "confidence": "approximate", "source": "Gulf News" },
+    { "id": "pearlgtl",  "name": "Pearl GTL",                "country": "Qatar",       "region": "Ras Laffan", "type": "gas", "lat": 25.92, "lng": 51.57, "stake": "Operator (with Qatar Petroleum)", "description": "World's largest gas-to-liquids plant.", "confidence": "approximate", "source": "Shell (representative coords)" },
+
+    { "id": "perdido",   "name": "Perdido hub",              "country": "USA",         "region": "Gulf of Mexico (offshore TX)", "type": "oil", "lat": 26.13, "lng": -94.90, "stake": "Operator", "description": "Among the world's deepest production platforms (~2,450m).", "confidence": "approximate", "source": "Shell deep-water (offshore approx.)" },
+    { "id": "mars",      "name": "Mars / Olympus hub",       "country": "USA",         "region": "Gulf of Mexico (Mississippi Canyon)", "type": "oil", "lat": 28.17, "lng": -89.22, "stake": "Operator", "description": "Core 'Mars corridor' production hub.", "confidence": "approximate", "source": "Shell deep-water (offshore approx.)" },
+    { "id": "appomattox","name": "Appomattox",               "country": "USA",         "region": "Gulf of Mexico (Norphlet)", "type": "oil", "lat": 28.65, "lng": -88.05, "stake": "Operator", "description": "Deepwater FPU hosting subsea tiebacks.", "confidence": "approximate", "source": "Shell deep-water (offshore approx.)" },
+    { "id": "whale",     "name": "Whale",                    "country": "USA",         "region": "Gulf of Mexico (Alaminos Canyon)", "type": "oil", "lat": 26.10, "lng": -95.00, "stake": "60% operator", "description": "Newest semisub, onstream 2025; replicates Vito design.", "confidence": "approximate", "source": "Shell (offshore approx.)" },
+    { "id": "vito",      "name": "Vito",                     "country": "USA",         "region": "Gulf of Mexico (Mississippi Canyon)", "type": "oil", "lat": 28.30, "lng": -88.80, "stake": "Operator", "description": "Simplified-design semisub, onstream 2023.", "confidence": "approximate", "source": "Shell (offshore approx.)" },
+    { "id": "bonga",     "name": "Bonga",                    "country": "Nigeria",     "region": "Offshore Niger Delta", "type": "oil", "lat": 4.10, "lng": 5.30, "stake": "Operator", "description": "Nigeria's first deepwater development (2005).", "confidence": "approximate", "source": "Shell (offshore approx.)" },
+    { "id": "mero",      "name": "Mero (pre-salt)",          "country": "Brazil",      "region": "Santos Basin", "type": "oil", "lat": -24.30, "lng": -42.50, "stake": "20% (Petrobras operator)", "description": "Pre-salt; FPSO Alexandre de Gusmão started 2025.", "confidence": "approximate", "source": "World Oil (offshore approx.)" },
+    { "id": "gatodomato","name": "Gato do Mato (pre-salt)",  "country": "Brazil",      "region": "Santos Basin", "type": "oil", "lat": -25.0, "lng": -42.0, "stake": "50% operator", "description": "New Shell-operated pre-salt development (FID 2025).", "confidence": "approximate", "source": "World Oil (offshore approx.)" },
+    { "id": "northsea",  "name": "North Sea (Shearwater area)","country": "United Kingdom","region": "Central North Sea", "type": "oil", "lat": 57.9, "lng": 1.95, "stake": "Shell U.K. interests", "description": "Representative point for Shell's UK North Sea production.", "confidence": "illustrative", "source": "Representative point — specific field not confirmed" },
+
+    { "id": "pernis",    "name": "Pernis (Energy & Chemicals Park Rotterdam)","country": "Netherlands","region": "Rotterdam","type": "refining","lat": 51.88, "lng": 4.39, "stake": "Owned", "description": "Europe's largest refinery.", "confidence": "verified", "source": "Shell / ICIS" },
+    { "id": "rheinland", "name": "Rheinland Energy & Chemicals Park","country": "Germany","region": "Wesseling/Godorf, Cologne","type": "refining","lat": 50.83, "lng": 6.97, "stake": "Owned", "description": "Germany's largest refinery, transitioning to an energy park.", "confidence": "verified", "source": "Shell" },
+    { "id": "norco",     "name": "Norco",                    "country": "USA",         "region": "Norco, Louisiana", "type": "refining", "lat": 29.99, "lng": -90.41, "stake": "Owned", "description": "Integrated refinery + chemicals on the Mississippi River.", "confidence": "verified", "source": "Shell" },
+    { "id": "scotford",  "name": "Scotford",                 "country": "Canada",      "region": "Fort Saskatchewan, Alberta", "type": "refining", "lat": 53.78, "lng": -113.07, "stake": "Owned", "description": "Refinery + chemicals + bitumen upgrader.", "confidence": "verified", "source": "Shell" },
+
+    { "id": "monaca",    "name": "Shell Polymers Monaca",    "country": "USA",         "region": "Monaca, Pennsylvania", "type": "chemicals", "lat": 40.66, "lng": -80.32, "stake": "Owned", "description": "Ethane cracker + polyethylene, online 2022.", "confidence": "verified", "source": "Wikipedia / Shell" },
+    { "id": "moerdijk",  "name": "Moerdijk",                 "country": "Netherlands", "region": "Moerdijk", "type": "chemicals", "lat": 51.70, "lng": 4.62, "stake": "Owned", "description": "Major petrochemical complex / cracker.", "confidence": "verified", "source": "Shell Chemicals" },
+    { "id": "geismar",   "name": "Geismar",                  "country": "USA",         "region": "Geismar, Louisiana", "type": "chemicals", "lat": 30.22, "lng": -91.02, "stake": "Owned", "description": "Chemicals complex (alpha olefins etc.).", "confidence": "verified", "source": "Shell Chemicals" },
+    { "id": "cspc",      "name": "CSPC (Nanhai)",            "country": "China",       "region": "Daya Bay, Huizhou", "type": "chemicals", "lat": 22.74, "lng": 114.55, "stake": "50% JV (CNOOC)", "description": "Large integrated petrochemical complex.", "confidence": "approximate", "source": "Shell Chemicals" },
+    { "id": "fife",      "name": "Fife Ethylene Plant",      "country": "United Kingdom","region": "Mossmorran, Fife", "type": "chemicals", "lat": 56.07, "lng": -3.31, "stake": "50% JV (ExxonMobil)", "description": "Ethylene cracker.", "confidence": "approximate", "source": "Shell Chemicals" },
+
+    { "id": "hkn",       "name": "Hollandse Kust Noord wind","country": "Netherlands", "region": "Offshore Egmond aan Zee", "type": "renewables", "lat": 52.69, "lng": 4.24, "stake": "50% JV (CrossWind)", "description": "759 MW offshore wind farm, operational 2024.", "confidence": "approximate", "source": "WindEurope (offshore approx.)" },
+    { "id": "hh1",       "name": "Holland Hydrogen I",       "country": "Netherlands", "region": "Port of Rotterdam", "type": "renewables", "lat": 51.95, "lng": 4.05, "stake": "Owned", "description": "200 MW electrolyser, Europe's largest renewable H2 plant.", "confidence": "approximate", "source": "World-Energy" },
+
+    { "id": "hq-london", "name": "Shell plc Global HQ",      "country": "United Kingdom","region": "London, South Bank", "type": "hub", "lat": 51.503, "lng": -0.116, "stake": "Global HQ (since 2022)", "description": "Registered and headquartered in London.", "confidence": "verified", "source": "Shell / Guardian" },
+    { "id": "hq-hague",  "name": "The Hague office",         "country": "Netherlands", "region": "The Hague", "type": "hub", "lat": 52.09, "lng": 4.28, "stake": "Major office (former HQ)", "description": "Long-time historic headquarters.", "confidence": "verified", "source": "Shell" },
+    { "id": "hub-houston","name": "Houston (Americas hub)",  "country": "USA",         "region": "Houston, Texas", "type": "hub", "lat": 29.76, "lng": -95.37, "stake": "Americas operational hub", "description": "Upstream / Gulf of Mexico operational centre.", "confidence": "verified", "source": "Shell" },
+    { "id": "hub-singapore","name": "Singapore (Asia-Pacific hub)","country": "Singapore","region": "Singapore", "type": "hub", "lat": 1.29, "lng": 103.85, "stake": "Asia-Pacific trading hub", "description": "Trading, chemicals and lubricants centre.", "confidence": "verified", "source": "Shell" }
+  ],
+  "routes": [
+    { "from": "qatarnfe", "to": "hub-singapore", "label": "LNG flow (Qatar → Asia)", "confidence": "illustrative" },
+    { "from": "prelude",  "to": "hub-singapore", "label": "LNG flow (Australia → Asia)", "confidence": "illustrative" },
+    { "from": "nlng",     "to": "pernis",        "label": "LNG / crude (Nigeria → Europe)", "confidence": "illustrative" },
+    { "from": "lngcanada","to": "hub-singapore", "label": "LNG flow (Canada → Asia)", "confidence": "illustrative" },
+    { "from": "perdido",  "to": "norco",         "label": "Crude (Gulf of Mexico → refining)", "confidence": "illustrative" },
+    { "from": "mero",     "to": "hub-houston",   "label": "Crude (Brazil → Americas)", "confidence": "illustrative" },
+    { "from": "pernis",   "to": "hq-london",     "label": "Products (Rotterdam → UK)", "confidence": "illustrative" },
+    { "from": "scotford", "to": "hub-houston",   "label": "Products (Canada → US)", "confidence": "illustrative" }
+  ]
+}

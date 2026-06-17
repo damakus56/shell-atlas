@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "description": "Curated Q&A about Shell and the energy industry. Answers researched from official Shell, SEC filings, EIA, Britannica and major outlets. Consumed by getAnswer() in js/explore.js — structured so the local lookup can later be swapped for a live AI backend.",
+    "confidence": "verified"
+  },
+  "questions": [
+    {
+      "id": "what-does-shell-do",
+      "q": "What does Shell actually do?",
+      "tags": ["overview", "basics"],
+      "a": "Shell is one of the world's largest integrated energy companies. It explores for and produces oil and natural gas (upstream), liquefies and ships natural gas as LNG (integrated gas), refines crude into fuels and chemicals, and sells fuels, lubricants and energy products to consumers and businesses through tens of thousands of retail stations and commercial channels (downstream/marketing). It also trades energy commodities at large scale and is building a renewables and low-carbon business including power, hydrogen, biofuels and carbon capture. In short: Shell finds, makes, moves, trades and sells energy across the entire chain — from the wellhead to the petrol pump.",
+      "source": "Shell — what we do; Britannica"
+    },
+    {
+      "id": "upstream-vs-downstream",
+      "q": "What is the difference between upstream and downstream?",
+      "tags": ["basics", "industry"],
+      "a": "'Upstream' is the start of the oil-and-gas chain: exploring for reserves, drilling wells, and producing crude oil and natural gas. 'Downstream' is the end: refining crude into products like petrol, diesel and jet fuel, manufacturing chemicals, and distributing and selling those products. In between sits 'midstream' — transport and storage (pipelines, tankers, terminals). Upstream profits track commodity prices and can be volatile; downstream profits depend on refining and marketing margins. An 'integrated' major like Shell spans all of these, which can smooth earnings across the cycle.",
+      "source": "Investopedia; Shell — what we do"
+    },
+    {
+      "id": "lng-supply-chain",
+      "q": "How does an LNG supply chain work?",
+      "tags": ["lng", "industry"],
+      "a": "LNG (liquefied natural gas) lets gas travel where pipelines can't. The chain has several steps: (1) natural gas is produced from a field; (2) at a liquefaction plant it is cooled to about −162°C, shrinking its volume roughly 600 times into a liquid; (3) it is loaded onto specialised refrigerated LNG carriers and shipped across oceans; (4) at the destination a regasification terminal warms it back into gas; and (5) it enters local pipelines for power, heating and industry. Shell is the world's largest LNG trader and operator, and pioneered floating LNG, which liquefies gas at sea.",
+      "source": "Shell — LNG; U.S. EIA — LNG explained"
+    },
+    {
+      "id": "energy-transition",
+      "q": "What is Shell doing on energy transition and net zero?",
+      "tags": ["transition", "climate"],
+      "a": "In 2020 Shell set an ambition to become a net-zero-emissions energy business by 2050 across Scope 1, 2 and 3 (including emissions from customers using its products). Its 2021 'Powering Progress' strategy includes halving Scope 1 and 2 operational emissions by 2030 (vs 2016) and reducing the net carbon intensity of products sold. Shell is investing in LNG, biofuels, hydrogen, EV charging, renewable power and carbon capture. Critics note that the majority of spending remains in oil and gas, and that Shell has trimmed some earlier climate targets — so its pace and ambition are contested.",
+      "source": "Shell — climate; WBCSD"
+    },
+    {
+      "id": "business-segments",
+      "q": "What are Shell's main business segments?",
+      "tags": ["overview", "business"],
+      "a": "As reported in its 2024 annual report, Shell organises around five operating segments plus Corporate: (1) Integrated Gas — natural gas, LNG and gas-to-liquids; (2) Upstream — exploration and production of crude oil and natural gas; (3) Marketing — retail stations, lubricants and fuels for sectors like aviation and marine; (4) Chemicals & Products — refineries, chemical plants, trading and oil-products supply; and (5) Renewables & Energy Solutions — renewable power, hydrogen, carbon capture and nature-based projects. The Corporate segment covers holdings, treasury, headquarters and central functions.",
+      "source": "Shell Form 20-F FY2024"
+    },
+    {
+      "id": "where-shell-operates",
+      "q": "Where does Shell operate?",
+      "tags": ["overview", "geography"],
+      "a": "Shell operates in dozens of countries across every inhabited continent. Major upstream and LNG operations include the US Gulf of Mexico, the North Sea, Nigeria, Oman, Qatar, Brazil, Malaysia and Australia (home to the Prelude floating LNG facility and the QGC gas business). Its refining and chemicals hubs are concentrated in the US Gulf Coast, the Netherlands (Pernis), China and Germany, and it sells fuels through one of the world's largest retail networks — tens of thousands of branded stations worldwide. Its headquarters and tax residence moved to London, UK, in 2022.",
+      "source": "Shell — projects and locations; Wikipedia"
+    },
+    {
+      "id": "integrated-gas",
+      "q": "What is integrated gas?",
+      "tags": ["lng", "business"],
+      "a": "'Integrated Gas' is the Shell segment that manages the full natural-gas value chain when gas is the primary product. It covers producing natural gas, converting it into LNG at liquefaction plants, shipping and trading LNG, and gas-to-liquids (GTL) technology that turns gas into liquid fuels and lubricants (as at Shell's Pearl GTL plant in Qatar). The 'integrated' label reflects that Shell links production, processing, transport and marketing of gas within one segment. It is one of Shell's most profitable areas, and Shell is the world's largest LNG trader — a position strengthened by the 2016 BG Group acquisition.",
+      "source": "Shell — integrated gas; Form 20-F FY2024"
+    },
+    {
+      "id": "shell-vs-majors",
+      "q": "How big is Shell compared to other oil majors?",
+      "tags": ["industry", "comparison"],
+      "a": "Shell is among the largest Western 'supermajors'. By 2024 revenue, ExxonMobil led (~$339bn), with Shell second (~$284bn), then TotalEnergies (~$196bn), Chevron (~$193bn) and BP (~$189bn). On profitability, ExxonMobil (~$48.9bn net income) far outpaced peers, with TotalEnergies (~$29.8bn), Chevron (~$28.1bn), Shell (~$16.5bn) and BP (~$11.5bn). By market value, US-based ExxonMobil and Chevron are typically the most valuable. Shell is consistently the largest LNG trader. (Figures vary by source and currency and should be treated as approximate.)",
+      "source": "Statista; Wikipedia — Big Oil"
+    },
+    {
+      "id": "oil-vs-gas",
+      "q": "What is the difference between crude oil and natural gas?",
+      "tags": ["basics", "industry"],
+      "a": "Both are fossil hydrocarbons formed underground over millions of years, but they differ in state and use. Crude oil is a liquid — a mix of heavier hydrocarbons refined into petrol, diesel, jet fuel, lubricants and plastic feedstocks. Natural gas is gaseous, mostly methane, used for electricity, heating, cooking and as a chemical feedstock; it generally burns cleaner than oil or coal. They are often found together in reservoirs. Gas is harder to transport — it travels by pipeline or must be chilled into LNG for shipping — whereas oil ships easily in tankers. Prices for the two are set in separate markets.",
+      "source": "U.S. EIA; Shell — oil and natural gas"
+    },
+    {
+      "id": "what-is-a-refinery",
+      "q": "What is a refinery and what does it produce?",
+      "tags": ["basics", "downstream"],
+      "a": "A refinery transforms crude oil into usable products. Crude is heated and separated in a distillation tower, where different hydrocarbons boil off at different temperatures, then further processed (cracking, reforming, treating) to upgrade and purify them. Typical outputs include petrol (gasoline), diesel, jet fuel/kerosene, heating oil, LPG, lubricants, bitumen for roads, and petrochemical feedstocks such as naphtha used to make plastics. Modern refineries aim to extract the most valuable mix of products from each barrel. Shell operates large refineries including Pernis in the Netherlands, one of Europe's largest, and is converting some sites into lower-carbon 'energy and chemicals parks'.",
+      "source": "U.S. EIA — refining crude oil; Shell"
+    },
+    {
+      "id": "flng",
+      "q": "What is FLNG (floating LNG)?",
+      "tags": ["lng", "technology"],
+      "a": "FLNG (floating liquefied natural gas) produces, liquefies, stores and offloads natural gas at sea, directly above an offshore field — removing the need for undersea pipelines to shore and onshore liquefaction plants. It allows development of remote or 'stranded' offshore gas. Shell's Prelude FLNG, off Western Australia (~475 km from Broome), is the world's largest floating offshore facility: about 488 m long, 74 m wide and roughly 600,000 tonnes. It is designed to produce around 3.6 million tonnes of LNG per year, plus condensate and LPG, and is moored on-station for 20–25 years. Prelude was the first deployment of Shell's FLNG technology.",
+      "source": "Shell Australia — Prelude overview; Shell — floating LNG"
+    },
+    {
+      "id": "controversy",
+      "q": "Has Shell faced criticism or controversy?",
+      "tags": ["climate", "society"],
+      "a": "Yes, on several fronts. In Nigeria's Niger Delta, Shell has faced decades of criticism over oil spills, gas flaring and environmental damage in Ogoniland; the 1995 execution of activist Ken Saro-Wiwa drew global attention, and Shell later reached settlements ($15.5m in 2009 without admitting liability, and £55m for the Bodo community in 2015). On climate, the 2021 Hague District Court ordered Shell to cut emissions 45% by 2030 — a ruling overturned on appeal in 2024. Campaigners and some regulators have also accused Shell of 'greenwashing'. Shell disputes many claims and points to settlements, cleanup programmes and transition spending. The balance of these debates remains contested.",
+      "source": "Amnesty International; Library of Congress"
+    }
+  ]
+}

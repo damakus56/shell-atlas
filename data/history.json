@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "description": "Milestones in Shell's history. The company was 'Royal Dutch Shell' until January 2022, then 'Shell plc'.",
+    "primarySources": [
+      "https://www.shell.com/who-we-are/our-history/our-company-history.html",
+      "https://en.wikipedia.org/wiki/Shell_plc"
+    ]
+  },
+  "milestones": [
+    { "year": "1833", "title": "A London shell shop", "text": "Marcus Samuel Sr. opens a shop in London's East End trading oriental goods, including decorative seashells — the origin of the Shell name and emblem.", "confidence": "verified", "source": "Shell — Our history" },
+    { "year": "1890", "title": "Royal Dutch Petroleum founded", "text": "Established in the Netherlands to develop oil fields in the Dutch East Indies; it received a royal charter, hence 'Royal Dutch'.", "confidence": "verified", "source": "Wikipedia / Shell" },
+    { "year": "1892", "title": "The tanker Murex", "text": "Marcus Samuel Jr. commissions the Murex, the first oil tanker to carry bulk oil through the Suez Canal, transforming oil transport.", "confidence": "approximate", "source": "Widely cited; secondary sources" },
+    { "year": "1897", "title": "Shell Transport and Trading", "text": "The Samuel brothers incorporate the 'Shell' Transport and Trading Company in London.", "confidence": "verified", "source": "Shell — Our history" },
+    { "year": "1907", "title": "Royal Dutch Shell Group formed", "text": "Royal Dutch and Shell Transport merge operations 60/40 to compete with Standard Oil — a dual-parent structure that lasted nearly a century.", "confidence": "verified", "source": "Wikipedia / Shell" },
+    { "year": "1930s", "title": "Global expansion", "text": "Through the 1910s–1930s Shell expands into the Americas, the Middle East and beyond, building refining, marketing and aviation-fuel businesses.", "confidence": "approximate", "source": "Shell — Our history" },
+    { "year": "1960s", "title": "Post-war boom", "text": "The post-WWII boom in automobiles, aviation and petrochemicals drives rapid growth in refining, retail stations and chemicals.", "confidence": "approximate", "source": "Shell — Our history" },
+    { "year": "1971", "title": "Brent field discovered", "text": "The Shell-Esso joint venture discovers the Brent field in the UK North Sea, north-east of Shetland.", "confidence": "verified", "source": "Wikipedia — Brent oilfield" },
+    { "year": "1976", "title": "Brent first oil & a benchmark", "text": "First oil flows from Brent; the field lends its name to 'Brent crude', still a primary global oil price benchmark.", "confidence": "verified", "source": "Wikipedia — Brent oilfield" },
+    { "year": "1995", "title": "Saro-Wiwa & Brent Spar", "text": "Activist Ken Saro-Wiwa, who campaigned against pollution in Ogoniland, is executed; the Brent Spar disposal controversy also triggers major protests — reputational landmarks.", "confidence": "verified", "source": "Amnesty / Wikipedia" },
+    { "year": "2004", "title": "Reserves overstatement scandal", "text": "Shell admits overstating 'proved' reserves by ~4.47 billion boe. Senior leaders resign; Shell pays a $120m SEC penalty and a £17m UK fine.", "confidence": "verified", "source": "SEC litigation release LR-18844" },
+    { "year": "2005", "title": "Unified as Royal Dutch Shell plc", "text": "The dual-parent structure is replaced by a single holding company, Royal Dutch Shell plc, completed 20 July 2005.", "confidence": "verified", "source": "Wikipedia / Shell" },
+    { "year": "2016", "title": "BG Group acquisition", "text": "Shell completes its acquisition of BG Group (announced ~$70bn; ~$53bn at close), becoming the world's largest LNG company.", "confidence": "verified", "source": "Offshore Energy / Shell" },
+    { "year": "2020", "title": "Net-zero by 2050 ambition", "text": "Shell announces an ambition to become a net-zero-emissions energy business by 2050, covering Scope 1, 2 and 3 emissions.", "confidence": "verified", "source": "WBCSD / Shell" },
+    { "year": "2021", "title": "Powering Progress & Hague ruling", "text": "Shell sets out its 'Powering Progress' transition strategy; in May, The Hague District Court orders Shell to cut emissions 45% by 2030 — later overturned on appeal in 2024.", "confidence": "verified", "source": "Shell / Library of Congress" },
+    { "year": "2021", "title": "Permian sale to ConocoPhillips", "text": "Shell agrees to sell its entire Permian Basin business to ConocoPhillips for $9.5bn — a major exit from US onshore shale.", "confidence": "verified", "source": "Shell press release" },
+    { "year": "2022", "title": "Renamed Shell plc, HQ to London", "text": "Shell drops the dual-share structure and 'Royal Dutch', moving tax residence and top management to London; the name becomes Shell plc.", "confidence": "verified", "source": "Al Jazeera / Shell" },
+    { "year": "2024", "title": "Climate ruling overturned", "text": "The Hague Court of Appeal overturns the 2021 emissions order, finding Shell has a duty to reduce emissions but the court cannot impose a specific percentage.", "confidence": "verified", "source": "Library of Congress" }
+  ]
+}

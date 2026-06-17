@@ -1,29 +1,128 @@
 {
   "_meta": {
-    "description": "Milestones in Shell's history. The company was 'Royal Dutch Shell' until January 2022, then 'Shell plc'. Each milestone has an image: 'illustrative' images are AI-generated atmospheric scenes for this project (not real archive photos); 'photo' images are real, credited CC-licensed photographs.",
+    "description": "Deeply-researched milestones in Shell's history, grouped into eras. The company was 'Royal Dutch Shell' until January 2022, then 'Shell plc'. Every milestone has a DISTINCT image generated to match its specific content (all 'illustrative' AI scenes for this project, not archive photos). 'fact' = a researched 'Did you know?' detail. Confidence: verified / approximate.",
     "primarySources": [
-      "https://www.shell.com/who-we-are/our-history/our-company-history.html",
-      "https://en.wikipedia.org/wiki/Shell_plc"
+      "Shell — Our history & Aviation history (shell.com)",
+      "Wikipedia (SS Murex, Brent oilfield, BG Group)",
+      "Britannica; Greenpeace; SEC; Library of Congress; logo-history & heritage sources"
     ]
   },
+  "eras": [
+    { "id": "origins",   "label": "Origins",            "span": "1833 – 1897", "blurb": "From a London seashell shop to oil tankers — and a Dutch rival rising in the East." },
+    { "id": "formation", "label": "Formation",          "span": "1907",        "blurb": "Two rivals merge to take on Standard Oil." },
+    { "id": "expansion", "label": "Global Expansion",   "span": "1915 – 1971", "blurb": "Fuelling the motor age, aviation, and an icon of design." },
+    { "id": "northsea",  "label": "The Oil Era",        "span": "1971 – 1976", "blurb": "The North Sea and a benchmark that still prices the world's oil." },
+    { "id": "crises",    "label": "Crises & Reckoning", "span": "1995 – 2004", "blurb": "Protest, tragedy and a crisis of trust." },
+    { "id": "modern",    "label": "Modern & Transition","span": "2005 – 2022", "blurb": "One company, the LNG era, and the road to net zero." }
+  ],
   "milestones": [
-    { "year": "1833", "title": "A London shell shop", "text": "Marcus Samuel Sr. opens a shop in London's East End trading oriental goods, including decorative seashells — the origin of the Shell name and emblem.", "confidence": "verified", "source": "Shell — Our history", "image": "images/hist-origins.jpg", "imageType": "illustrative" },
-    { "year": "1890", "title": "Royal Dutch Petroleum founded", "text": "Established in the Netherlands to develop oil fields in the Dutch East Indies; it received a royal charter, hence 'Royal Dutch'.", "confidence": "verified", "source": "Wikipedia / Shell", "image": "images/hist-tanker.jpg", "imageType": "illustrative" },
-    { "year": "1892", "title": "The tanker Murex", "text": "Marcus Samuel Jr. commissions the Murex, the first oil tanker to carry bulk oil through the Suez Canal, transforming oil transport.", "confidence": "approximate", "source": "Widely cited; secondary sources", "image": "images/hist-tanker.jpg", "imageType": "illustrative" },
-    { "year": "1897", "title": "Shell Transport and Trading", "text": "The Samuel brothers incorporate the 'Shell' Transport and Trading Company in London.", "confidence": "verified", "source": "Shell — Our history", "image": "images/hist-origins.jpg", "imageType": "illustrative" },
-    { "year": "1907", "title": "Royal Dutch Shell Group formed", "text": "Royal Dutch and Shell Transport merge operations 60/40 to compete with Standard Oil — a dual-parent structure that lasted nearly a century.", "confidence": "verified", "source": "Wikipedia / Shell", "image": "images/hist-tanker.jpg", "imageType": "illustrative" },
-    { "year": "1930s", "title": "Global expansion", "text": "Through the 1910s–1930s Shell expands into the Americas, the Middle East and beyond, building refining, marketing and aviation-fuel businesses.", "confidence": "approximate", "source": "Shell — Our history", "image": "images/seg-chemicals.jpg", "imageType": "illustrative" },
-    { "year": "1960s", "title": "Post-war boom", "text": "The post-WWII boom in cars, aviation and petrochemicals drives rapid growth in refining, retail stations and chemicals.", "confidence": "approximate", "source": "Shell — Our history", "image": "images/seg-marketing.jpg", "imageType": "illustrative" },
-    { "year": "1971", "title": "Brent field discovered", "text": "The Shell-Esso joint venture discovers the Brent field in the UK North Sea, north-east of Shetland.", "confidence": "verified", "source": "Wikipedia — Brent oilfield", "image": "images/hist-northsea.jpg", "imageType": "illustrative" },
-    { "year": "1976", "title": "Brent first oil & a benchmark", "text": "First oil flows from Brent; the field lends its name to 'Brent crude', still a primary global oil price benchmark.", "confidence": "verified", "source": "Wikipedia — Brent oilfield", "image": "images/real-platform.jpg", "imageType": "photo", "imageCredit": "Photo: NAC, Wikimedia Commons (CC BY-SA 4.0)" },
-    { "year": "1995", "title": "Saro-Wiwa & Brent Spar", "text": "Activist Ken Saro-Wiwa, who campaigned against pollution in Ogoniland, is executed; the Brent Spar disposal controversy also triggers major protests.", "confidence": "verified", "source": "Amnesty / Wikipedia", "image": "images/hist-northsea.jpg", "imageType": "illustrative" },
-    { "year": "2004", "title": "Reserves overstatement scandal", "text": "Shell admits overstating 'proved' reserves by ~4.47 billion boe. Senior leaders resign; Shell pays a $120m SEC penalty and a £17m UK fine.", "confidence": "verified", "source": "SEC litigation release LR-18844", "image": "images/seg-corporate.jpg", "imageType": "illustrative" },
-    { "year": "2005", "title": "Unified as Royal Dutch Shell plc", "text": "The dual-parent structure is replaced by a single holding company, Royal Dutch Shell plc, completed 20 July 2005.", "confidence": "verified", "source": "Wikipedia / Shell", "image": "images/seg-corporate.jpg", "imageType": "illustrative" },
-    { "year": "2016", "title": "BG Group acquisition", "text": "Shell completes its acquisition of BG Group (announced ~$70bn; ~$53bn at close), becoming the world's largest LNG company.", "confidence": "verified", "source": "Offshore Energy / Shell", "image": "images/hist-lng.jpg", "imageType": "illustrative" },
-    { "year": "2020", "title": "Net-zero by 2050 ambition", "text": "Shell announces an ambition to become a net-zero-emissions energy business by 2050, covering Scope 1, 2 and 3 emissions.", "confidence": "verified", "source": "WBCSD / Shell", "image": "images/hist-transition.jpg", "imageType": "illustrative" },
-    { "year": "2021", "title": "Permian sale to ConocoPhillips", "text": "Shell agrees to sell its entire Permian Basin business to ConocoPhillips for $9.5bn — a major exit from US onshore shale.", "confidence": "verified", "source": "Shell press release", "image": "images/seg-upstream.jpg", "imageType": "illustrative" },
-    { "year": "2021", "title": "Powering Progress & Hague ruling", "text": "Shell sets out its 'Powering Progress' strategy; in May, The Hague District Court orders Shell to cut emissions 45% by 2030 — later overturned on appeal in 2024.", "confidence": "verified", "source": "Shell / Library of Congress", "image": "images/hist-transition.jpg", "imageType": "illustrative" },
-    { "year": "2022", "title": "Renamed Shell plc, HQ to London", "text": "Shell drops the dual-share structure and 'Royal Dutch', moving tax residence and top management to London; the name becomes Shell plc.", "confidence": "verified", "source": "Al Jazeera / Shell", "image": "images/hist-london.jpg", "imageType": "illustrative" },
-    { "year": "2024", "title": "Climate ruling overturned", "text": "The Hague Court of Appeal overturns the 2021 emissions order, finding Shell has a duty to reduce emissions but that the court cannot impose a specific percentage.", "confidence": "verified", "source": "Library of Congress", "image": "images/seg-renewables.jpg", "imageType": "illustrative" }
+    {
+      "year": "1833", "era": "origins", "title": "A shop full of seashells",
+      "text": "Marcus Samuel Sr. opens a shop in London's East End dealing in antiques, curios and decorative oriental seashells — used for the fashionable Victorian craft of shell-covered boxes. Demand grows so fast he begins importing shells from the Far East, building an import-export business.",
+      "fact": "The world's energy giant began, quite literally, as a seashell-box and curio shop — the origin of both the name and the shell emblem.",
+      "image": "images/hx-shop.jpg", "confidence": "approximate", "source": "The Hustle; Conchology (exact 1833 date approximate)"
+    },
+    {
+      "year": "1890", "era": "origins", "title": "Royal Dutch Petroleum is founded",
+      "text": "In The Hague, the Royal Dutch Petroleum Company is set up to exploit an oil concession in northern Sumatra in the Dutch East Indies. J.B.A. Kessler drives the venture forward after pioneer Aeilko Jans Zijlker's death.",
+      "fact": "The 'Royal' was a genuine royal honorific, tied to a charter from King William III of the Netherlands — granted while the company was still a tiny startup.",
+      "image": "images/hx-royaldutch.jpg", "confidence": "verified", "source": "Draugen history; Wikipedia — J.B.A. Kessler"
+    },
+    {
+      "year": "1892", "era": "origins", "title": "The Murex conquers Suez",
+      "text": "Marcus Samuel Jr. commissions the SS Murex, which becomes the first dedicated bulk-oil tanker to transit the Suez Canal, carrying ~4,000 tons of Russian kerosene to Asia. Bulk transport undercut Standard Oil's case-oil model and cracked open Asian markets.",
+      "fact": "The Murex was named after a spiny sea-snail shell — beginning Shell's enduring tradition of naming its tankers after seashells (Conch, Clam, Volute, Nerite…).",
+      "image": "images/hx-murex.jpg", "confidence": "verified", "source": "Wikipedia — SS Murex"
+    },
+    {
+      "year": "1897", "era": "origins", "title": "The 'Shell' Transport and Trading Company",
+      "text": "Marcus Samuel Jr. incorporates The 'Shell' Transport and Trading Company to formalise the oil business, building a tanker fleet and refining in the Far East.",
+      "fact": "The name was officially written with quotation marks — 'Shell' — and the first emblem was a mussel shell, only replaced by the famous scallop (pecten) around 1904.",
+      "image": "images/hx-shelltt.jpg", "confidence": "verified", "source": "Encyclopedia.com; UniMelb Library (logo history)"
+    },
+    {
+      "year": "1907", "era": "formation", "title": "The Anglo-Dutch merger",
+      "text": "To compete with Rockefeller's dominant Standard Oil, Royal Dutch and Shell Transport merge their operations. Shell's weaker finances let Royal Dutch's Henri Deterding dictate a 60% Dutch / 40% British split — but the two parents keep separate legal identities.",
+      "fact": "That 1907 compromise created the famous Anglo-Dutch dual-listed structure that endured for nearly a century — until 2022.",
+      "image": "images/hx-merger.jpg", "confidence": "verified", "source": "Companies History; New World Encyclopedia"
+    },
+    {
+      "year": "1915", "era": "expansion", "title": "Red and yellow hit the road",
+      "text": "As Shell builds early service stations in California, it adopts the bold red-and-yellow livery now known worldwide, chosen for high roadside visibility. The palette was brightened to its modern form around 1948.",
+      "fact": "The colours are widely said to echo the Spanish flag, a nod to California's Spanish heritage — though this is repeated branding lore rather than a documented decision.",
+      "image": "images/hx-california.jpg", "confidence": "approximate", "source": "Logos-world; DesignYourWay (commonly-cited lore)"
+    },
+    {
+      "year": "1920s", "era": "expansion", "title": "Fuelling the age of flight",
+      "text": "Shell becomes synonymous with early aviation, supplying AeroShell fuel for landmark flights and air races as the industry takes off.",
+      "fact": "Blériot's 1909 cross-Channel flight and Alcock & Brown's 1919 first non-stop transatlantic crossing were both flown on Shell fuel.",
+      "image": "images/hx-aviation.jpg", "confidence": "verified", "source": "Shell — Aviation history"
+    },
+    {
+      "year": "1932", "era": "expansion", "title": "Shell-Mex & BP — rivals under one roof",
+      "text": "During the Depression, Shell merges its UK marketing with BP to form Shell-Mex & BP, a joint sales company that fuels Britain for over four decades.",
+      "fact": "Two future arch-rivals, Shell and BP, sold petrol in Britain under one combined banner from 1932 until they finally separated in 1975.",
+      "image": "images/hx-shellmex.jpg", "confidence": "verified", "source": "Grace's Guide; Companies History"
+    },
+    {
+      "year": "1971", "era": "expansion", "title": "Raymond Loewy redesigns the Pecten",
+      "text": "Legendary industrial designer Raymond Loewy modernises the scallop logo — smoothing its edges, reducing the ridges and adding a bold outline. The result is essentially the mark still used today.",
+      "fact": "Loewy also shaped the Coca-Cola fountain dispenser, the Lucky Strike pack and Air Force One. His pecten is so iconic it's recognised worldwide with no wordmark at all.",
+      "image": "images/hx-logo.jpg", "confidence": "verified", "source": "Logo Histories; Logo Design Love"
+    },
+    {
+      "year": "1971", "era": "northsea", "title": "Brent field discovered",
+      "text": "The Shell-Esso joint venture (Shell as operator) discovers the Brent field in the UK North Sea — one of the largest fields in the basin and the namesake of the world's leading oil benchmark.",
+      "fact": "The field is named after the brent goose (Shell named UK fields after waterbirds). The neat 'Broom-Rannoch-Etive-Ness-Tarbert' acronym for the reservoir layers is a widely-repeated coincidence, not the actual origin.",
+      "image": "images/hx-brent.jpg", "confidence": "approximate", "source": "Wikipedia — Brent oilfield; GeoExpro (acronym is a commonly-cited backronym)"
+    },
+    {
+      "year": "1976", "era": "northsea", "title": "First oil — and a global benchmark",
+      "text": "First oil flows from Brent in November 1976. As the field's output later declined, the name lived on: 'Brent' became the benchmark that prices most internationally traded crude.",
+      "fact": "Brent Blend now combines crude from Brent, Forties, Oseberg and Ekofisk (BFOE) — yet still carries the name of Shell's North Sea field.",
+      "image": "images/hx-brentoil.jpg", "confidence": "verified", "source": "Offshore Technology; Wikipedia — Brent oilfield"
+    },
+    {
+      "year": "1995", "era": "crises", "title": "Brent Spar",
+      "text": "Greenpeace activists occupy the Brent Spar storage buoy to oppose Shell's government-approved plan to sink it in the deep Atlantic. A Europe-wide consumer boycott forces Shell to reverse course and dismantle it onshore — a landmark in corporate reputation.",
+      "fact": "Greenpeace later admitted it had overstated the oil left aboard the Spar — yet Shell still 'lost' the PR battle: the classic case of being right but defeated.",
+      "image": "images/hx-brentspar.jpg", "confidence": "verified", "source": "Greenpeace International; Global Nonviolent Action Database (cost figures approximate)"
+    },
+    {
+      "year": "1995", "era": "crises", "title": "Ken Saro-Wiwa and the Niger Delta",
+      "text": "Writer-activist Ken Saro-Wiwa, who accused Shell of waging 'ecological war' on Ogoniland, is executed with eight others by Nigeria's military regime. The case becomes a defining controversy over corporate responsibility in the Niger Delta; Shell settled a related suit for $15.5m in 2009 without admitting liability.",
+      "fact": "",
+      "image": "images/hx-ogoni.jpg", "confidence": "verified", "source": "Britannica — Ken Saro-Wiwa; Harvard Human Rights Program"
+    },
+    {
+      "year": "2004", "era": "crises", "title": "The reserves scandal",
+      "text": "Over four restatements, Shell cuts its 'proved' reserves by about 4.47 billion barrels — roughly 23%. The chairman and other senior leaders depart, and Shell settles with regulators for around $151m combined.",
+      "fact": "The shock — a $120m SEC penalty plus a then-record £17m UK fine — directly drove the decision to scrap the old dual-board structure.",
+      "image": "images/hx-reserves.jpg", "confidence": "verified", "source": "SEC press release 2004-116; The Irish Times"
+    },
+    {
+      "year": "2005", "era": "modern", "title": "One company at last",
+      "text": "Partly in response to the reserves crisis and investor demands for transparency, the dual Anglo-Dutch parents are collapsed into a single company, Royal Dutch Shell plc — though the 60:40 legacy lingers on in A and B share classes.",
+      "fact": "It took until 2005 to unify a structure created back in 1907 — and even then the split survived inside the share classes for another 17 years.",
+      "image": "images/hx-unify.jpg", "confidence": "verified", "source": "Oil & Gas Journal"
+    },
+    {
+      "year": "2016", "era": "modern", "title": "BG Group and the LNG era",
+      "text": "Shell completes its ~$53bn acquisition of the UK's BG Group — its largest deal ever — making it the world's largest LNG company and adding major assets in Australia and Brazil. Gas, not just oil, becomes central to Shell's identity.",
+      "fact": "Shell's fifth tanker named Murex is today a ~100,000-tonne LNG carrier — closing the loop to the original 1892 Murex that started it all.",
+      "image": "images/hx-bg.jpg", "confidence": "verified", "source": "Hydrocarbon Processing; Wikipedia — BG Group"
+    },
+    {
+      "year": "2020", "era": "modern", "title": "A net-zero ambition",
+      "text": "Shell announces an ambition to become a net-zero-emissions energy business by 2050. In 2021, a Hague court ordered it to cut group emissions 45% by 2030 — the first time a court ordered a private company to align with Paris — a ruling later overturned on appeal in 2024.",
+      "fact": "The 2021 Hague ruling was a world first against a company; the appeal court in 2024 kept Shell's duty to cut emissions but struck down the specific 45% figure.",
+      "image": "images/hx-netzero.jpg", "confidence": "verified", "source": "WBCSD; CNBC; Library of Congress"
+    },
+    {
+      "year": "2022", "era": "modern", "title": "Goodbye 'Royal Dutch'",
+      "text": "Shell drops 'Royal Dutch', simplifies to a single line of shares and moves its tax residence and headquarters to London — ending the Anglo-Dutch arrangement dating to 1907. The name becomes simply Shell plc. (A year earlier it had exited US shale, selling its Permian business to ConocoPhillips for $9.5bn.)",
+      "fact": "The change stripped away the 'Royal Dutch' title that had stood since the 1890 Dutch royal charter — and prompted real political dismay in the Netherlands at losing a national champion.",
+      "image": "images/hx-london.jpg", "confidence": "verified", "source": "SEC Form 8-A12B; Al Jazeera"
+    }
   ]
 }

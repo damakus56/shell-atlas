@@ -1,9 +1,11 @@
 /* ============================================================
-   globe.js — the interactive 3D globe on the landing page.
-   Uses Globe.gl (wraps three.js) from CDN. Plots Shell assets as
-   glowing categorised points, animates illustrative supply-route
-   arcs, shows hover tooltips, and focuses a country on click.
-   Tuned for fast, responsive motion; degrades on small screens.
+   globe.js — stylized, modern globe on the landing page.
+   Uses Globe.gl (wraps three.js). Instead of a realistic
+   satellite/topographic earth, it renders clean low-poly
+   HEX-POLYGON landmasses on a soft solid sphere — lighter to
+   render and on-brand. Plots Shell assets as glowing points,
+   animates illustrative supply arcs, hover tooltips, click-focus.
+   Tuned for fast, fluid rotation / drag / zoom.
    ============================================================ */
 
 (function () {
@@ -12,37 +14,44 @@
   const mount = document.getElementById("globe");
   if (!mount || typeof Globe === "undefined") {
     if (mount) mount.innerHTML =
-      '<div style="position:absolute;inset:0;display:grid;place-items:center;color:#8b93a1">Globe could not load (needs an internet connection for the 3D library).</div>';
+      '<div style="position:absolute;inset:0;display:grid;place-items:center;color:#6b7280">Globe could not load (needs an internet connection for the 3D library).</div>';
     return;
   }
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isSmall = window.matchMedia("(max-width: 680px)").matches;
 
+  // Stylised palette (fits the light + red/yellow brand system)
+  const OCEAN = "#eaedf3";   // soft sphere
+  const LAND = "#aab2c2";    // neutral low-poly land (keeps coloured points readable)
+  const ATMO = "#DD1D21";    // Shell-red glow
+
   let assets = [], categories = [], assetById = {};
   const activeTypes = new Set();
   let world, hoveredPoint = null;
 
-  fetch("data/projects.json")
-    .then((r) => r.json())
-    .then((data) => {
+  Promise.all([
+    fetch("data/projects.json").then((r) => r.json()),
+    fetch("data/countries.geojson").then((r) => r.json()).catch(() => ({ features: [] })),
+  ])
+    .then(([data, geo]) => {
       assets = data.assets;
       categories = data.categories;
       assets.forEach((a) => (assetById[a.id] = a));
       categories.forEach((c) => activeTypes.add(c.type));
       buildLegend();
-      initGlobe(data.routes);
+      initGlobe(data.routes, geo.features || []);
     })
     .catch((err) => {
-      console.error("Failed to load projects.json", err);
-      mount.innerHTML = '<div style="position:absolute;inset:0;display:grid;place-items:center;color:#8b93a1">Could not load asset data.</div>';
+      console.error("Failed to load globe data", err);
+      mount.innerHTML = '<div style="position:absolute;inset:0;display:grid;place-items:center;color:#6b7280">Could not load globe data.</div>';
     });
 
-  const colorFor = (type) => { const c = categories.find((x) => x.type === type); return c ? c.color : "#fff"; };
+  const colorFor = (type) => { const c = categories.find((x) => x.type === type); return c ? c.color : "#333"; };
   const visibleAssets = () => assets.filter((a) => activeTypes.has(a.type));
   const refreshPoints = () => { if (world) world.pointsData(visibleAssets()); };
 
-  /* ---------- Legend / category filter ---------- */
+  /* ---------- Legend / filter ---------- */
   function buildLegend() {
     const el = document.querySelector(".globe-legend");
     if (!el) return;
@@ -75,8 +84,8 @@
   }
   const hideTip = () => tip.classList.remove("show");
 
-  /* ---------- Globe init ---------- */
-  function initGlobe(routes) {
+  /* ---------- Init ---------- */
+  function initGlobe(routes, landFeatures) {
     const arcs = routes.map((r) => {
       const a = assetById[r.from], b = assetById[r.to];
       if (!a || !b) return null;
@@ -85,52 +94,63 @@
 
     world = Globe()(mount)
       .backgroundColor("rgba(0,0,0,0)")
+      .showGlobe(true)
+      .showGraticules(false)
       .showAtmosphere(true)
-      .atmosphereColor("#DD1D21")
-      .atmosphereAltitude(0.16)
-      // Brighter "blue marble" earth suits the light theme.
-      .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
-      .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
+      .atmosphereColor(ATMO)
+      .atmosphereAltitude(0.2)
+      // ---- Stylised low-poly land (no texture) ----
+      .hexPolygonsData(landFeatures)
+      .hexPolygonResolution(isSmall ? 2 : 3)
+      .hexPolygonMargin(0.32)
+      .hexPolygonUseDots(true)
+      .hexPolygonAltitude(0.012)
+      .hexPolygonColor(() => LAND)
+      // ---- Asset points ----
       .pointsData(visibleAssets())
       .pointLat("lat").pointLng("lng")
       .pointColor((d) => colorFor(d.type))
-      .pointAltitude(0.025)
-      .pointRadius(isSmall ? 0.34 : 0.45)
+      .pointAltitude(0.04)
+      .pointRadius(isSmall ? 0.4 : 0.5)
       .pointResolution(isSmall ? 10 : 14)
       .pointsMerge(false)
       .pointLabel(() => "")
       .onPointHover((pt) => { hoveredPoint = pt; mount.style.cursor = pt ? "pointer" : "grab"; if (!pt) hideTip(); })
       .onPointClick((pt) => focusCountry(pt.country))
+      // ---- Illustrative supply arcs ----
       .arcsData(arcs)
-      .arcColor(() => ["rgba(251,206,7,0.05)", "rgba(221,29,33,0.9)", "rgba(251,206,7,0.05)"])
-      .arcAltitudeAutoScale(0.45)
-      .arcStroke(0.6)
-      .arcDashLength(0.4).arcDashGap(0.55)
-      .arcDashAnimateTime(prefersReduced ? 0 : 2600)   // faster flow
+      .arcColor(() => ["rgba(251,206,7,0.08)", "rgba(221,29,33,0.9)", "rgba(251,206,7,0.08)"])
+      .arcAltitudeAutoScale(0.42)
+      .arcStroke(0.65)
+      .arcDashLength(0.4).arcDashGap(0.5)
+      .arcDashAnimateTime(prefersReduced ? 0 : 2400)
       .arcLabel((d) => `${d.label} · illustrative route`);
+
+    // Soft solid ocean sphere (no satellite map).
+    const gm = world.globeMaterial();
+    if (gm) { if (gm.color) gm.color.set(OCEAN); gm.shininess = 6; if ("emissive" in gm) gm.emissive.set("#ffffff"), (gm.emissiveIntensity = 0.04); }
 
     mount.addEventListener("mousemove", (e) => { if (hoveredPoint) showTip(hoveredPoint, e.clientX, e.clientY); });
 
-    world.pointOfView({ lat: 20, lng: 10, altitude: isSmall ? 2.8 : 2.2 }, 0);
+    world.pointOfView({ lat: 22, lng: 8, altitude: isSmall ? 2.7 : 2.15 }, 0);
 
-    // ---- Responsive, lively controls ----
+    // ---- Fast, fluid controls ----
     const controls = world.controls();
     controls.autoRotate = !prefersReduced;
-    controls.autoRotateSpeed = 1.7;        // was sluggish before — much livelier now
+    controls.autoRotateSpeed = 2.2;     // lively
     controls.enableDamping = true;
-    controls.dampingFactor = 0.12;         // snappy but smooth
-    controls.rotateSpeed = 1.15;           // responsive drag
-    controls.zoomSpeed = 1.6;
+    controls.dampingFactor = 0.16;      // snappy settle
+    controls.rotateSpeed = 1.3;         // responsive drag
+    controls.zoomSpeed = 2.0;           // snappy zoom
     controls.enableZoom = true;
-    controls.minDistance = 170;
-    controls.maxDistance = 580;
+    controls.minDistance = 160;
+    controls.maxDistance = 560;
 
-    // Pause rotation during interaction, resume quickly after.
     let resumeTimer;
     controls.addEventListener("start", () => { controls.autoRotate = false; clearTimeout(resumeTimer); });
     controls.addEventListener("end", () => {
       clearTimeout(resumeTimer);
-      if (!prefersReduced) resumeTimer = setTimeout(() => (controls.autoRotate = true), 1800);
+      if (!prefersReduced) resumeTimer = setTimeout(() => (controls.autoRotate = true), 1600);
     });
 
     sizeGlobe();
@@ -169,7 +189,7 @@
     if (list.length && world) {
       const anchor = list[0];
       world.controls().autoRotate = false;
-      world.pointOfView({ lat: anchor.lat, lng: anchor.lng, altitude: 1.55 }, 750); // faster fly
+      world.pointOfView({ lat: anchor.lat, lng: anchor.lng, altitude: 1.5 }, 700);
     }
   }
 })();

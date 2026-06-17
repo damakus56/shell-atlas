@@ -1,34 +1,76 @@
 {
   "_meta": {
-    "description": "Shell plc year-by-year financials. Revenue and net income are IFRS figures (net income = income attributable to Shell plc shareholders). Capex = cash capital expenditure. Production = total available for sale, thousand barrels of oil equivalent per day (kboe/d).",
-    "currency": "USD billions (revenue, netIncome, capex); kboe/d (production)",
-    "note": "The company was 'Royal Dutch Shell plc' through 2021 and 'Shell plc' from January 2022. 2020 was a loss year driven by the COVID demand collapse and large impairments. 2022 was a record-profit year.",
+    "description": "Shell plc financials. Revenue & net income are IFRS (net income = income attributable to Shell plc shareholders). Capex = cash capital expenditure. Production = total available for sale (kboe/d). Dividend = declared per ordinary share (USD). Cash flow = cash flow from operating activities (USD bn). Net debt = Shell-reported net debt (USD bn).",
+    "note": "Company was 'Royal Dutch Shell plc' through 2021, 'Shell plc' from Jan 2022. 2020 = COVID loss year & the first dividend cut since WWII. 2022 = record profit. Net debt peaked after the 2016 BG Group acquisition.",
     "primarySources": [
       "https://www.shell.com/investors/results-and-reporting/annual-report.html",
-      "https://stockanalysis.com/stocks/SHEL/financials/",
-      "https://en.wikipedia.org/wiki/Shell_plc"
+      "Shell Q4 full-year results releases (2020, 2023, 2024)",
+      "https://stockanalysis.com/stocks/SHEL/financials/"
     ]
   },
   "series": [
-    { "year": 2015, "revenue": 265.0, "netIncome": 1.9,  "capex": 26.0, "production": 2954, "confidence": "approximate", "source": "Royal Dutch Shell Annual Report 2015 / stockanalysis.com (single-source, approximate)" },
-    { "year": 2016, "revenue": 233.6, "netIncome": 4.8,  "capex": 22.1, "production": 3668, "confidence": "verified",    "source": "Royal Dutch Shell FY2017 results (incl. 2016 comparatives); Wikipedia" },
-    { "year": 2017, "revenue": 305.2, "netIncome": 13.4, "capex": 20.8, "production": 3664, "confidence": "verified",    "source": "Royal Dutch Shell FY2017 unaudited results; Wikipedia" },
-    { "year": 2018, "revenue": 388.4, "netIncome": 23.4, "capex": 23.0, "production": 3839, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2018; Wikipedia (capex approximate)" },
-    { "year": 2019, "revenue": 344.0, "netIncome": 15.8, "capex": 24.0, "production": 3752, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2019; Wikipedia (capex approximate)" },
-    { "year": 2020, "revenue": 180.0, "netIncome": -21.7,"capex": 18.0, "production": 3386, "confidence": "verified",    "source": "Royal Dutch Shell Annual Report 2020 (loss year); Wikipedia (capex approximate)" },
-    { "year": 2021, "revenue": 261.0, "netIncome": 20.1, "capex": 19.0, "production": 3237, "confidence": "verified",    "source": "Shell Annual Report 2021; stockanalysis.com" },
-    { "year": 2022, "revenue": 381.0, "netIncome": 42.3, "capex": 22.6, "production": 2864, "confidence": "verified",    "source": "Shell Annual Report 2022 (record profit); stockanalysis.com" },
-    { "year": 2023, "revenue": 316.0, "netIncome": 19.4, "capex": 23.0, "production": 2791, "confidence": "verified",    "source": "Shell Annual Report 2023; stockanalysis.com" },
-    { "year": 2024, "revenue": 284.0, "netIncome": 16.5, "capex": 19.6, "production": 2836, "confidence": "verified",    "source": "Shell Q4 2024 & full-year results / Form 20-F FY2024; stockanalysis.com" }
+    { "year": 2015, "revenue": 265.0, "netIncome": 1.9,  "capex": 26.0, "production": 2954, "dividend": 1.88, "cashFlow": 29.8, "netDebt": 25.0 },
+    { "year": 2016, "revenue": 233.6, "netIncome": 4.8,  "capex": 22.1, "production": 3668, "dividend": 1.88, "cashFlow": 20.6, "netDebt": 73.0 },
+    { "year": 2017, "revenue": 305.2, "netIncome": 13.4, "capex": 20.8, "production": 3664, "dividend": 1.88, "cashFlow": 35.7, "netDebt": 67.0 },
+    { "year": 2018, "revenue": 388.4, "netIncome": 23.4, "capex": 23.0, "production": 3839, "dividend": 1.88, "cashFlow": 53.1, "netDebt": 60.0 },
+    { "year": 2019, "revenue": 344.0, "netIncome": 15.8, "capex": 24.0, "production": 3752, "dividend": 1.88, "cashFlow": 42.2, "netDebt": 79.1 },
+    { "year": 2020, "revenue": 180.0, "netIncome": -21.7,"capex": 18.0, "production": 3386, "dividend": 0.65, "cashFlow": 34.1, "netDebt": 75.4 },
+    { "year": 2021, "revenue": 261.0, "netIncome": 20.1, "capex": 19.0, "production": 3237, "dividend": 0.69, "cashFlow": 45.1, "netDebt": 52.6 },
+    { "year": 2022, "revenue": 381.0, "netIncome": 42.3, "capex": 22.6, "production": 2864, "dividend": 0.89, "cashFlow": 68.4, "netDebt": 44.8 },
+    { "year": 2023, "revenue": 316.0, "netIncome": 19.4, "capex": 23.0, "production": 2791, "dividend": 1.03, "cashFlow": 54.2, "netDebt": 43.5 },
+    { "year": 2024, "revenue": 284.0, "netIncome": 16.5, "capex": 19.6, "production": 2836, "dividend": 1.08, "cashFlow": 54.7, "netDebt": 38.8 }
   ],
   "metrics": [
-    { "key": "revenue",    "label": "Revenue",            "unit": "$B",     "color": "#FBCE07", "format": "currency", "desc": "Total money taken in from selling energy and products — the top line, before any costs." },
-    { "key": "netIncome",  "label": "Net income",         "unit": "$B",     "color": "#DD1D21", "format": "currency", "desc": "Profit (or loss) left for shareholders after all costs and taxes — the bottom line." },
-    { "key": "capex",      "label": "Capital expenditure","unit": "$B",     "color": "#7FB2FF", "format": "currency", "desc": "Cash invested in building and maintaining assets like platforms, plants and projects." },
-    { "key": "production", "label": "Oil & gas production","unit": "kboe/d", "color": "#4ADE80", "format": "number",   "desc": "How much oil and gas was produced per day, in thousands of barrels of oil equivalent." }
+    { "key": "revenue",    "label": "Revenue",            "unit": "$B",      "color": "#DD1D21", "format": "currency", "desc": "Total money taken in from selling energy and products — the top line, before costs.", "approxYears": [2015], "source": "Shell annual reports / stockanalysis.com / Wikipedia" },
+    { "key": "netIncome",  "label": "Net income",         "unit": "$B",      "color": "#E8A100", "format": "currency", "desc": "Profit (or loss) for shareholders after all costs and taxes — the bottom line.", "approxYears": [2015], "source": "Shell annual reports / stockanalysis.com" },
+    { "key": "cashFlow",   "label": "Operating cash flow","unit": "$B",      "color": "#0E9F6E", "format": "currency", "desc": "Cash generated by day-to-day operations — a key gauge of financial health.", "approxYears": [2015,2016,2017,2018], "source": "Shell Q4 results releases (2020–2024); stockanalysis.com" },
+    { "key": "capex",      "label": "Capital expenditure","unit": "$B",      "color": "#3B82F6", "format": "currency", "desc": "Cash invested in building and maintaining assets like platforms, plants and projects.", "approxYears": [2015,2018,2019,2020], "source": "Shell annual reports (cash capex); stockanalysis.com" },
+    { "key": "netDebt",    "label": "Net debt",           "unit": "$B",      "color": "#9333EA", "format": "currency", "desc": "Debt minus cash (Shell-reported). Peaked after the 2016 BG Group acquisition, then fell.", "approxYears": [2015,2021,2022], "source": "Shell Q4 results releases (gearing & net debt)" },
+    { "key": "dividend",   "label": "Dividend / share",   "unit": "$/sh",    "color": "#EC4899", "format": "perShare", "desc": "Declared dividend per ordinary share. Note the ~66% cut in 2020, then a steady rebuild.", "approxYears": [2015,2016,2017,2018,2022], "source": "stockanalysis.com / dividendmax (per ordinary share; NYSE ADR ≈ 2×)" },
+    { "key": "production", "label": "Oil & gas production","unit": "kboe/d",  "color": "#14B8A6", "format": "number",   "desc": "Oil and gas produced per day, in thousands of barrels of oil equivalent.", "approxYears": [2015,2016,2017], "source": "Shell annual reports (total available for sale)" }
   ],
+  "segmentEarnings": {
+    "_meta": "Adjusted Earnings by segment (USD bn). Renewables & Energy Solutions and Corporate were negative in 2024. Confidence: verified.",
+    "source": "Shell Q4 & full-year 2024 results (30 Jan 2025)",
+    "confidence": "verified",
+    "years": {
+      "2024": [
+        { "name": "Integrated Gas", "value": 11.4, "color": "#FBCE07" },
+        { "name": "Upstream", "value": 8.4, "color": "#DD1D21" },
+        { "name": "Marketing", "value": 3.9, "color": "#FFB81C" },
+        { "name": "Chemicals & Products", "value": 2.9, "color": "#FF6B35" },
+        { "name": "Renewables & Energy", "value": -0.5, "color": "#0E9F6E" },
+        { "name": "Corporate", "value": -2.0, "color": "#9CA3AF" }
+      ],
+      "2023": [
+        { "name": "Integrated Gas", "value": 13.9, "color": "#FBCE07" },
+        { "name": "Upstream", "value": 9.8, "color": "#DD1D21" },
+        { "name": "Marketing", "value": 3.3, "color": "#FFB81C" },
+        { "name": "Chemicals & Products", "value": 3.6, "color": "#FF6B35" },
+        { "name": "Renewables & Energy", "value": 0.8, "color": "#0E9F6E" },
+        { "name": "Corporate", "value": -2.9, "color": "#9CA3AF" }
+      ]
+    }
+  },
+  "sharePrice": {
+    "_meta": "Indexed growth comparison on ONE consistent basis: NOMINAL year-end closing PRICE (price-only, excludes dividends) for all series. This keeps the comparison fair — no mixing of dividend-adjusted and nominal data. Values are APPROXIMATE periodic year-end closes, NOT a precise market feed. The chart rebases each selected series to 100 at the start of the chosen range, so it shows percentage price growth, not absolute price. Not investment advice. (A total-return view including reinvested dividends would lift the dividend-paying companies and the S&P 500 somewhat; gold pays none.)",
+    "basis": "Nominal year-end close, price only",
+    "confidence": "approximate",
+    "years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "ranges": [
+      { "label": "10Y", "startYear": 2015 },
+      { "label": "5Y",  "startYear": 2020 }
+    ],
+    "series": [
+      { "id": "shell",  "label": "Shell (SHEL)",     "color": "#DD1D21", "highlight": true, "confidence": "approximate", "source": "RDS.A→SHEL nominal year-end closes (digrin/StatMuse; 2015–2018 reconstructed)", "values": [45.50, 54.60, 66.50, 59.00, 58.98, 36.10, 45.05, 49.56, 59.57, 59.05] },
+      { "id": "xom",    "label": "ExxonMobil (XOM)", "color": "#1D4ED8", "confidence": "approximate", "source": "XOM nominal year-end closes (macrotrends/StatMuse)", "values": [77.95, 90.26, 83.64, 68.19, 69.78, 41.22, 61.19, 110.30, 99.98, 107.59] },
+      { "id": "cvx",    "label": "Chevron (CVX)",    "color": "#059669", "confidence": "approximate", "source": "CVX nominal year-end closes (macrotrends; reconstructed)", "values": [89.96, 117.70, 125.19, 108.79, 120.51, 84.45, 117.35, 179.49, 149.16, 143.50] },
+      { "id": "spx",    "label": "S&P 500",          "color": "#7C3AED", "confidence": "verified", "source": "S&P 500 year-end index closes — price index (multpl.com)", "values": [2043.94, 2238.83, 2673.61, 2506.85, 3230.78, 3756.07, 4766.18, 3839.50, 4769.83, 5881.63] },
+      { "id": "gold",   "label": "Gold",             "color": "#E8A100", "confidence": "approximate", "source": "Gold year-end close, USD/oz (JM Bullion / bullion-rates)", "values": [1061.30, 1152.07, 1302.94, 1282.57, 1517.24, 1898.60, 1829.05, 1823.26, 2062.90, 2624.49] }
+    ]
+  },
   "callouts": [
-    { "year": 2020, "label": "COVID demand collapse — net loss of $21.7B", "metric": "netIncome" },
+    { "year": 2020, "label": "COVID demand collapse — net loss of $21.7B & a ~66% dividend cut", "metric": "netIncome" },
     { "year": 2022, "label": "Record profit — $42.3B net income", "metric": "netIncome" }
   ]
 }

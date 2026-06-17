@@ -1,69 +1,148 @@
 {
   "_meta": {
-    "description": "Shell plc reporting business segments as defined in the Shell Annual Report / Form 20-F FY2024.",
+    "description": "Shell plc reporting segments (Shell Annual Report / Form 20-F FY2024) with deep content for per-business pages. FY2024 adjusted earnings shown where relevant. Note: Shell moved 'wholesale commercial fuels' from Chemicals & Products into Marketing effective 1 Jan 2024.",
     "source": "https://www.sec.gov/Archives/edgar/data/0001306965/000130696525000007/shel-20241231.htm",
+    "totalAdjEarnings2024": "23.7",
     "confidence": "verified"
   },
   "segments": [
     {
       "id": "integrated-gas",
       "name": "Integrated Gas",
-      "tagline": "Natural gas, LNG and gas-to-liquids",
-      "description": "Liquefied natural gas (LNG), the conversion of natural gas into gas-to-liquids fuels and products, and the marketing and trading of LNG and natural gas. Shell is the world's largest LNG trader.",
-      "accent": "#FBCE07",
+      "tagline": "The world's largest LNG trader",
+      "accent": "#E8A100",
       "type": "gas",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-gas.jpg",
+      "realImage": "images/real-lng.jpg",
+      "realCredit": "LNG carrier — photo by Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)",
+      "earnings2024": 11.4,
+      "earningsShare": "~48% of adjusted earnings",
+      "description": "Integrated Gas runs Shell's liquefied natural gas (LNG) business end-to-end — producing natural gas, liquefying it, shipping it, and trading and marketing it worldwide. It also includes gas-to-liquids (GTL), turning natural gas into cleaner-burning fuels, lubricants and chemical feedstocks.",
+      "facts": [
+        { "text": "Largest single profit driver: $11.4B adjusted earnings in 2024 (~48% of group)", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "World's largest LNG trader — roughly 17% of global LNG trade", "confidence": "verified", "source": "Shell — LNG" },
+        { "text": "LNG sales ~65.8 Mt; liquefaction volumes ~29.1 Mt in 2024", "confidence": "approximate", "source": "Shell FY2024 reporting (cross-check 20-F)" },
+        { "text": "Operates ~10% of the world's LNG shipping fleet", "confidence": "approximate", "source": "Energy Digital" },
+        { "text": "Targets ~4–5% annual LNG sales growth to 2030", "confidence": "approximate", "source": "Rigzone (2025)" }
+      ],
+      "flagship": ["Prelude FLNG (Australia)", "Pearl GTL (Qatar)", "Queensland Curtis LNG / QGC", "Nigeria LNG (NLNG)", "Pavilion Energy (acquired 2024)"],
+      "connects": "Gas feeds liquefaction and trading; GTL output supplies cleaner fuels and base oils used by Chemicals & Products and Marketing. LNG also underpins Renewables & Energy Solutions' power and trading desks.",
+      "challenge": "Shell brands gas as the lower-carbon 'transition fuel' and is growing LNG, drawing criticism that this entrenches fossil dependence and methane-leak risk. Earnings swing with global gas prices."
     },
     {
       "id": "upstream",
       "name": "Upstream",
       "tagline": "Finding and producing oil & gas",
-      "description": "Exploration for and extraction of crude oil, natural gas and natural gas liquids, plus the transport of these to market.",
       "accent": "#DD1D21",
       "type": "oil",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-upstream.jpg",
+      "realImage": "images/real-platform.jpg",
+      "realCredit": "North Sea oil platform — photo by NAC, Wikimedia Commons (CC BY-SA 4.0)",
+      "earnings2024": 8.4,
+      "earningsShare": "~35% of adjusted earnings",
+      "description": "Upstream explores for, develops and produces crude oil and natural gas — for transport fuels, energy and petrochemical feedstocks. Shell has focused this on a smaller set of high-value, lower-cost, lower-carbon-intensity positions.",
+      "facts": [
+        { "text": "$8.4B adjusted earnings in 2024 (~35% of group) — second-largest driver", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "Produced ~1.5 million barrels of liquids per day in 2024", "confidence": "verified", "source": "Form 20-F FY2024" },
+        { "text": "Plus ~7.7 billion cubic feet of natural gas per day", "confidence": "verified", "source": "Form 20-F FY2024" },
+        { "text": "Concentrated in deepwater: US Gulf of Mexico and Brazil pre-salt", "confidence": "verified", "source": "Shell — deep water" },
+        { "text": "Sold its US Permian shale business to ConocoPhillips ($9.5B, 2021)", "confidence": "verified", "source": "Shell press release" }
+      ],
+      "flagship": ["Gulf of Mexico (Perdido, Mars, Vito, Whale)", "Brazil pre-salt (Mero, Gato do Mato)", "Bonga (Nigeria)", "UK & Netherlands North Sea"],
+      "connects": "Upstream crude and gas feed Chemicals & Products refineries and Integrated Gas liquefaction; the fuels ultimately reach customers through Marketing.",
+      "challenge": "Shell softened earlier pledges to cut oil output ~1–2%/year, instead holding production broadly stable to 2030 — welcomed by investors, criticised by climate advocates. Legacy Nigerian operations face long-running spill litigation."
     },
     {
       "id": "marketing",
       "name": "Marketing",
-      "tagline": "Fuels, lubricants and retail",
-      "description": "Sale of fuels, lubricants and convenience retail to retail and business customers — the Mobility, Lubricants, and Sectors & Decarbonisation businesses.",
+      "tagline": "Where Shell meets the customer",
       "accent": "#FFB81C",
       "type": "retail",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-marketing.jpg",
+      "realImage": "images/real-retail.jpg",
+      "realCredit": "Shell service station — photo by Hugh Venables, Wikimedia Commons (CC BY-SA 2.0)",
+      "earnings2024": 3.9,
+      "earningsShare": "~16% of adjusted earnings",
+      "description": "Marketing sells fuels and services directly to people and businesses — through Shell-branded stations, convenience retail, lubricants, fleet solutions, aviation, marine and EV charging. It is Shell's most consumer-facing, higher-margin downstream business.",
+      "facts": [
+        { "text": "$3.9B adjusted earnings in 2024 (~16% of group)", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "~47,000 Shell-branded retail sites across 80+ markets", "confidence": "approximate", "source": "Shell Annual Report (2023–24)" },
+        { "text": "~33 million customers served daily", "confidence": "approximate", "source": "Form 20-F FY2024" },
+        { "text": "World's #1 finished-lubricants supplier for 18+ years (~11.6% share)", "confidence": "verified", "source": "Shell (2024)" },
+        { "text": "Scaling EV charging toward a 200,000 charge-point target by 2030", "confidence": "approximate", "source": "Shell — EV charging" }
+      ],
+      "flagship": ["Shell retail & Shell Select", "Shell V-Power fuels", "Shell Helix / Rotella / Pennzoil lubricants", "Shell Recharge (EV)", "Shell Aviation & Marine"],
+      "connects": "Marketing is the demand-side outlet for fuels refined by Chemicals & Products and base oils from Integrated Gas — turning the group's molecules into branded, higher-margin sales.",
+      "challenge": "Shell is rationalising its retail footprint (divesting ~500–1,000 sites) and recalibrating EV ambitions toward fast-charging hubs after slower-than-expected EV demand — read by some as a pullback from electrification."
     },
     {
       "id": "chemicals-products",
       "name": "Chemicals & Products",
       "tagline": "Refining and petrochemicals",
-      "description": "Refineries and chemical plants that turn crude oil and feedstocks into fuels and petrochemicals, plus associated pipeline, trading, optimisation and oil-sands activities.",
       "accent": "#FF6B35",
       "type": "refining",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-chemicals.jpg",
+      "realImage": "images/real-refinery.jpg",
+      "realCredit": "Oil refinery — photo by W.carter, Wikimedia Commons (CC0)",
+      "earnings2024": 2.9,
+      "earningsShare": "~12% of adjusted earnings",
+      "description": "This segment refines crude oil into fuels and feedstocks and manufactures petrochemicals used in packaging, electronics and more. It houses oil-products trading and is the focus of Shell's 'energy and chemicals parks' transformation.",
+      "facts": [
+        { "text": "$2.9B adjusted earnings in 2024 (~12% of group)", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "Earnings fell sharply in 2024 on weak refining & chemicals margins", "confidence": "verified", "source": "Barchart / Shell" },
+        { "text": "Converting refineries into integrated energy & chemicals parks", "confidence": "verified", "source": "Shell Annual Report" },
+        { "text": "Reduced its refinery portfolio from 14 sites to about 5–6", "confidence": "verified", "source": "ICIS (2020)" },
+        { "text": "Shell Polymers Monaca (Pennsylvania) cracker came online in 2022", "confidence": "verified", "source": "Shell" }
+      ],
+      "flagship": ["Energy & Chemicals Park Rotterdam (Pernis)", "Shell Polymers Monaca (USA)", "Moerdijk (Netherlands)", "Rheinland (Germany)", "Norco & Geismar (USA)"],
+      "connects": "Refineries process Upstream and third-party crude into fuels sold by Marketing and feedstocks for petrochemicals; trading optimises product flows across the whole group.",
+      "challenge": "Structural overcapacity and weak margins have pressured chemicals; Shell has reviewed and divested some assets while pivoting parks toward lower-carbon products. Monaca has faced local air-quality scrutiny."
     },
     {
       "id": "renewables",
       "name": "Renewables & Energy Solutions",
-      "tagline": "Power, hydrogen, CCS and more",
-      "description": "Renewable power generation; trading and optimisation of power and pipeline gas; carbon credits; hydrogen; carbon capture and storage; nature-based projects; and Shell Ventures.",
-      "accent": "#4ADE80",
+      "tagline": "Lower-carbon power, hydrogen & trading",
+      "accent": "#0E9F6E",
       "type": "renewables",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-renewables.jpg",
+      "realImage": "images/real-wind.jpg",
+      "realCredit": "Egmond aan Zee offshore wind farm — photo by Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)",
+      "earnings2024": -0.5,
+      "earningsShare": "a loss in 2024",
+      "description": "This segment covers renewable power generation, power and environmental-products trading, hydrogen, electric mobility and electricity supply. It is Shell's main vehicle for the energy transition — pairing nascent low-carbon assets with a large power-trading business.",
+      "facts": [
+        { "text": "Adjusted loss of ~$0.5B in 2024; trading partly offset asset losses", "confidence": "verified", "source": "Shell FY2024 commentary" },
+        { "text": "Holland Hydrogen I: a 200 MW electrolyser, Europe's largest green-H₂ plant", "confidence": "verified", "source": "Port of Rotterdam" },
+        { "text": "CrossWind JV built the 759 MW Hollandse Kust Noord wind farm", "confidence": "verified", "source": "NS Energy / WindEurope" },
+        { "text": "Owns sonnen (home batteries / virtual power plant, Germany)", "confidence": "verified", "source": "Shell" },
+        { "text": "Trimmed some renewables ambitions under a 'value over volume' strategy", "confidence": "verified", "source": "Reuters / Shell" }
+      ],
+      "flagship": ["Holland Hydrogen I (green hydrogen)", "CrossWind / Hollandse Kust Noord (offshore wind)", "sonnen (home batteries)", "Shell Energy (power & gas supply)", "Power & carbon trading desks"],
+      "connects": "Renewable power and hydrogen support Shell's own decarbonisation (e.g. green H₂ to the Rotterdam park) and supply electrons for Marketing's EV charging; trading integrates with the other segments' optimisation.",
+      "challenge": "The segment is persistently loss-making and Shell has retreated from several clean-power commitments — exiting some power-retail markets, scaling back offshore wind, and dropping a 2035 interim carbon-intensity target — drawing criticism that it is deprioritising the transition."
     },
     {
       "id": "corporate",
       "name": "Corporate",
-      "tagline": "Holdings, treasury and central functions",
-      "description": "Non-operating support: holdings and treasury, headquarters and central functions, self-insurance, and centrally managed innovation.",
-      "accent": "#9CA3AF",
+      "tagline": "Financing, holdings & group functions",
+      "accent": "#6B7280",
       "type": "corporate",
-      "confidence": "verified",
-      "source": "Shell Form 20-F FY2024"
+      "image": "images/seg-corporate.jpg",
+      "realImage": "",
+      "realCredit": "",
+      "earnings2024": -2.0,
+      "earningsShare": "a central cost (not a business)",
+      "description": "Corporate covers Shell's holding-company functions, group financing and treasury, self-insurance, and central headquarters costs not allocated to the operating segments. It is a cost centre that funds and underwrites the rest of the group.",
+      "facts": [
+        { "text": "Adjusted-earnings drag of ~$2.0B in 2024 (interest, tax, central costs)", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "Returned ~$8.7B in dividends to shareholders in 2024", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "Plus ~$14.1B in share buybacks in 2024", "confidence": "verified", "source": "Shell FY2024 results" },
+        { "text": "Houses group treasury, financing and self-insurance", "confidence": "verified", "source": "Form 20-F FY2024" },
+        { "text": "Bears costs of the 2022 consolidation into a single UK plc", "confidence": "verified", "source": "Shell" }
+      ],
+      "flagship": ["Shell plc holding entity", "Group treasury & financing", "Self-insurance vehicles", "London headquarters & central functions"],
+      "connects": "Corporate allocates capital across all five operating segments, manages the balance sheet, and channels their cash flows into dividends and buybacks.",
+      "challenge": "Capital allocation is the central debate: large buybacks and shareholder returns please investors but are criticised by climate advocates as money that could fund the transition faster."
     }
   ]
 }

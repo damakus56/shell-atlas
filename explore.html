@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore — Shell Atlas</title>
   <meta name="description" content="An interactive Q&A explorer with clear, sourced answers about Shell and the energy industry. Unofficial educational project." />
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Cg transform='translate(16,27)'%3E%3Crect x='-2.4' y='-21' width='4.8' height='21' rx='2.4' transform='rotate(-25)' fill='%23FBA907'/%3E%3Crect x='-2.4' y='-22' width='4.8' height='22' rx='2.4' fill='%23E8A100'/%3E%3Crect x='-2.4' y='-21' width='4.8' height='21' rx='2.4' transform='rotate(25)' fill='%23FBA907'/%3E%3Ccircle r='2.6' fill='%23DD1D21'/%3E%3C/g%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23DD1D21'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23FBCE07' font-family='Arial' font-weight='bold'%3ES%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,7 +17,7 @@
     <div class="wrap">
       <div class="eyebrow reveal">Ask the Atlas</div>
       <h1 class="reveal" data-delay="1">Explore the energy world</h1>
-      <p class="muted reveal" data-delay="2" style="max-width:50ch;margin:16px auto 0">
+      <p class="muted reveal" data-delay="2" style="max-width:50ch;margin:16px auto 0;font-size:1.1rem">
         Clear, sourced answers to common questions about Shell, oil &amp; gas, and the energy transition.
       </p>
       <div class="search-box reveal" data-delay="2">
@@ -30,8 +29,8 @@
 
   <div class="wrap">
     <div class="explore-layout">
-      <div class="q-list" id="q-list"><!-- question buttons --></div>
-      <div class="answer-panel" id="answer-panel"><!-- selected answer --></div>
+      <div class="q-list" id="q-list"></div>
+      <div class="answer-panel" id="answer-panel"></div>
     </div>
   </div>
 

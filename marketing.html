@@ -3,32 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>History — Shell Atlas</title>
-  <meta name="description" content="An image-rich animated timeline of Shell's history and major milestones, from a 19th-century London shell shop to a global energy company. Unofficial educational project." />
+  <title>Marketing — Shell Atlas</title>
+  <meta name="description" content="Marketing: what this Shell business does, key facts and figures, flagship assets and how it connects to the rest of Shell. Unofficial educational project." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Cg transform='translate(16,27)'%3E%3Crect x='-2.4' y='-21' width='4.8' height='21' rx='2.4' transform='rotate(-25)' fill='%23FBA907'/%3E%3Crect x='-2.4' y='-22' width='4.8' height='22' rx='2.4' fill='%23E8A100'/%3E%3Crect x='-2.4' y='-21' width='4.8' height='21' rx='2.4' transform='rotate(25)' fill='%23FBA907'/%3E%3Ccircle r='2.6' fill='%23DD1D21'/%3E%3C/g%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-
-  <section class="timeline-hero">
-    <div class="wrap">
-      <div class="eyebrow reveal">From seashells to supermajor</div>
-      <h1 class="reveal" data-delay="1">A history of Shell</h1>
-      <p class="muted reveal" data-delay="2" style="max-width:54ch;margin:18px auto 0;font-size:1.1rem">
-        Nearly two centuries of energy — founding, mergers, landmark projects and the ongoing
-        energy transition. Every milestone is sourced; images are illustrative unless credited.
-      </p>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <div class="timeline" id="timeline"></div>
-  </div>
-
+<body data-segment="marketing">
+  <!-- Content rendered by segment.js from data/products.json -->
+  <div id="seg-root"></div>
   <script src="js/shared.js"></script>
-  <script src="js/history.js"></script>
+  <script src="js/segment.js"></script>
 </body>
 </html>

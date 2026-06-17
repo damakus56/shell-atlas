@@ -106,6 +106,8 @@
 
     // Always go through getAnswer() — same path a live backend would use.
     const ans = await getAnswer(id);
+    // Guard against out-of-order async responses (matters once a live backend is wired in).
+    if (activeId !== id) return;
     // reflow to restart the CSS animation
     void panel.offsetWidth;
     panel.classList.add("fade");

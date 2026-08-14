@@ -1,0 +1,12 @@
+{
+  "name": "shell-atlas",
+  "domain": "02-energy-lng",
+  "status": "done",
+  "description": "Unofficial, educational interactive visualization of Shell plc's global energy operations (public).",
+  "stack": "vanilla HTML/CSS/JS",
+  "links": {
+    "github": "https://github.com/damakus56/shell-atlas",
+    "manual": "README.md"
+  },
+  "reviewed": "2026-07-11"
+}
